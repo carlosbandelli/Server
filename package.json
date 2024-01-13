@@ -6,7 +6,7 @@
   "main": "src/server.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "dev": "ts-node src/server.ts"
+    "dev": "tsc && node dist/server.js"
   },
   "keywords": [],
   "author": "",
