@@ -132,7 +132,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\carlo\\OneDrive\\Documentos\\GitHub\\ESport\\server\\prisma\\generated\\client",
+      "value": "C:\\Users\\carlo\\OneDrive\\Documentos\\GitHub\\Server\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -149,8 +149,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": "../../../.env"
   },
   "relativePath": "../..",
   "clientVersion": "5.8.0",
