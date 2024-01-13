@@ -1,9 +1,9 @@
-import express from 'express';
-import { PrismaClient } from '@prisma/client';
-import cors from 'cors';
+const express = require('express');
+const { PrismaClient } = require('@prisma/client');
+const cors = require('cors');
 
-import { convertHourStringToMinutes } from './utils/convert-minutes-string-to-hour-string';
-import { convertMinutesToHourString } from './utils/convert-hour-string-to-minute';
+const { convertHourStringToMinutes } = require('./utils/convert-minutes-string-to-hour-string');
+const { convertMinutesToHourString } = require('./utils/convert-hour-string-to-minute');
 
 const app = express();
 
