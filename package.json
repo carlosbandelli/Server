@@ -2,11 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "src/server.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "dev": "tsc && node dist/server.js"
+    "dev": "ts-node src/server.ts"
   },
   "keywords": [],
   "author": "",
