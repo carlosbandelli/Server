@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/server.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf ./dist && tsc",
     "dev": "tsnd --exit-child src/server.ts"
   },
   "keywords": [],
