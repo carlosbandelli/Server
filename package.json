@@ -2,12 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.ts",
+  "main": "tsc && dist/server.Js",
   "engines": {
     "node": "18"
   },
   "scripts": {
     "build": "npx prisma generate --schema=./prisma/schema.prisma && tsc",
+    "start": "node dist/server.js",
     "dev": "npx prisma generate && ts-node-dev --transpile-only --no-notify dist/server.js",
     "generate:prisma": "prisma generate",
     "generate:prisma:edge": "prisma generate --client=./prisma/generated/client/edge"
