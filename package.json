@@ -7,22 +7,21 @@
     "node": "18"
   },
   "scripts": {
-    "postinstall": "npx prisma generate",
-    "build": "npm run postinstall && tsc",
+    "build": "tsc",
     "dev": "ts-node-dev --transpile-only --no-notify dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^5.8.0",
     "cors": "^2.8.5",
     "express": "^4.18.1"
   },
   "devDependencies": {
+    "@prisma/client": "^5.8.1",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
-    "prisma": "^5.8.0",
+    "prisma": "^5.8.1",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
