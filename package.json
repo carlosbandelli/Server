@@ -9,7 +9,7 @@
   },
   "scripts": {
     "postinstall": "npx prisma generate",
-    "build": "rimraf dist && tsc",
+    "build": "tsc",
     "dev": "ts-node-dev --transpile-only --no-notify dist/server.js"
   },
   "keywords": [],
