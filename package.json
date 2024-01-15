@@ -9,8 +9,8 @@
   },
   "scripts": {
     "postinstall": "npx prisma generate",
-    "build": "rm -rf ./dist && tsc",
-    "dev": "ts-node-dev --transpile-only --no-notify src/server.ts"
+    "build": "mkdir dist && rmdir /s /q dist && tsc",
+    "dev": "ts-node-dev --transpile-only --no-notify dist/server.js"
   },
   "keywords": [],
   "author": "",
