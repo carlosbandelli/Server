@@ -1,0 +1,11 @@
+# render.yaml
+
+tasks:
+  - name: Install Dependencies
+    command: npm install
+
+  - name: Generate Prisma Client
+    command: npm run generate:prisma
+
+  - name: Build
+    command: npm run build
