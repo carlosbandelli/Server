@@ -10,7 +10,7 @@
   "scripts": {
     "postinstall": "npx prisma generate",
     "build": "rm -rf ./dist && tsc",
-    "dev": "tsc && node src/server.ts"
+    "dev": "ts-node-dev --transpile-only --no-notify src/server.ts"
   },
   "keywords": [],
   "author": "",
