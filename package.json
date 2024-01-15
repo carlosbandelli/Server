@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev --transpile-only --no-notify dist/server.js",
+    "dev": "npx prisma generate && -node-dev --transpile-only --no-notify dist/server.js",
     "generate:prisma": "prisma generate",
     "generate:prisma:edge": "prisma generate --client=./prisma/generated/client/edge"
   },
