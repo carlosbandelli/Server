@@ -2,6 +2,7 @@ import { PrismaClient } from '@prisma/client';
 
 import express from 'express';
 import cors from 'cors';
+import * as fs from 'fs';
 
 import { convertHourStringToMinutes } from './utils/convert-minutes-string-to-hour-string';
 import { convertMinutesToHourString } from './utils/convert-hour-string-to-minute';
@@ -105,6 +106,14 @@ const PORT = 3333;
 
 async function startServer() {
   try {
+    // Verifique a existência do arquivo gerado pelo Prisma
+    const prismaClientExists = fs.existsSync('./prisma/generated/client/index.js');
+
+    if (!prismaClientExists) {
+      console.error('Prisma Client not generated. Run "npm run build" first.');
+      process.exit(1);
+    }
+
     await prisma.$connect();
     console.log('Connected to the database');
 
