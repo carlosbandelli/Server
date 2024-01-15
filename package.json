@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "npx prisma generate",
-    "build": "tsc",
+    "build": "npm run postinstall && tsc",
     "dev": "ts-node-dev --transpile-only --no-notify dist/server.js"
   },
   "keywords": [],
