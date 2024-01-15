@@ -100,5 +100,20 @@ app.get('/ads/:id/discord', async (request, response) => {
   })
 })
 
+const PORT = 3333;
 
-app.listen(3333)
+async function startServer() {
+  try {
+    await prisma.$connect();
+    console.log('Connected to the database');
+
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error('Error connecting to the database:', error);
+    process.exit(1);
+  }
+}
+
+startServer();
