@@ -1,10 +1,29 @@
-version: "3"
+version: "3.9"
 services:
-  postgres:
+  database:
     image: postgres
+    container_name: database_games_api
+    restart: always
     environment:
-      POSTGRES_USER: hilyzhzu
-      POSTGRES_PASSWORD: NtjkigpnzWagFllkfI3-xZreXjPoCrSH
-      POSTGRES_DB: hilyzhzu
+      POSTGRES_USER: mobile
+      POSTGRES_PASSWORD: games
+      POSTGRES_DB: mobile
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "5432:5432"
+    volumes:
+      - pgdata:/data/postgres
+
+  # app:
+  #   build: .
+  #   container_name: database_api
+  #   ports:
+  #     - "5000:5000"
+  #   volumes:
+  #     - ./node_modules:/usr/app/node_modules
+  #     - /usr/app/node_modules
+  #   depends_on:
+  #     - database
+volumes:
+  pgdata:
+    driver: local

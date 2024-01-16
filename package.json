@@ -2,32 +2,23 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "tsc && dist/server.js",
-  "engines": {
-    "node": "18"
-  },
+  "main": "src/server.js",
   "scripts": {
-    "build": "npx prisma generate --schema=./prisma/schema.prisma && tsc",
-    "start": "node dist/server.js",
-    "dev": "npx prisma generate && ts-node-dev --transpile-only --no-notify dist/server.js",
-    "generate:prisma": "prisma generate",
-    "generate:prisma:edge": "prisma generate --client=./prisma/generated/client/edge"
+    "build": "tsc",
+    "dev": "tsnd --exit-child src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.8.0",
     "cors": "^2.8.5",
-    "express": "^4.18.1",
-    "fs": "^0.0.1-security"
+    "express": "^4.18.1"
   },
   "devDependencies": {
-    "@prisma/client": "^5.8.1",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.14",
-    "prisma": "^5.8.1",
-    "rimraf": "^5.0.5",
-    "ts-node": "^10.9.2",
+    "prisma": "^5.8.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.3"
   }
