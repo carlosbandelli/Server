@@ -14,16 +14,16 @@ services:
     volumes:
       - pgdata:/data/postgres
 
-  app:
-    build: .
-    container_name: database_api
-    ports:
-      - "5000:5000"
-    volumes:
-      - ./node_modules:/usr/app/node_modules
-      - /usr/app/node_modules
-    depends_on:
-      - database
+  # app:
+  #   build: .
+  #   container_name: database_api
+  #   ports:
+  #     - "5000:5000"
+  #   volumes:
+  #     - ./node_modules:/usr/app/node_modules
+  #     - /usr/app/node_modules
+  #   depends_on:
+  #     - database
 volumes:
   pgdata:
     driver: local
